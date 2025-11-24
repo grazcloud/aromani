@@ -55,6 +55,13 @@ const Header = () => {
               Água na Boca
             </button>
             <button
+              onClick={() => scrollToSection("pet")}
+              className="hover:text-accent transition-colors font-medium"
+              style={{ color: "hsl(236, 44%, 21%)" }}
+            >
+              Traga seu Pet
+            </button>
+            <button
               onClick={() => scrollToSection("contato")}
               className="bg-accent text-accent-foreground px-6 py-2 rounded-full hover:opacity-90 transition-opacity font-medium"
             >
