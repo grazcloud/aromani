@@ -35,7 +35,7 @@ const Products = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#1f3c98" }}>
             Nossos Produtos
           </h2>
-          <div className="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <div className="w-24 h-1 mx-auto mb-6" style={{ backgroundColor: "#b5561c" }}></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Descubra nossa variedade de produtos artesanais, preparados 
             diariamente com ingredientes selecionados.
@@ -49,11 +49,11 @@ const Products = () => {
               className="bg-card p-8 rounded-lg shadow-sm hover:shadow-lg transition-all group"
             >
               <div className="flex items-start gap-4 mb-4">
-                <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors">
-                  <category.icon className="w-7 h-7 text-accent" />
+                <div className="w-14 h-14 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-opacity-30 transition-colors" style={{ backgroundColor: "rgba(181, 86, 28, 0.1)" }}>
+                  <category.icon className="w-7 h-7" style={{ color: "#b5561c" }} />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-2" style={{ color: "#1f3c98" }}>
+                  <h3 className="text-2xl font-bold mb-2" style={{ color: "#b5561c" }}>
                     {category.title}
                   </h3>
                   <p className="text-foreground">

@@ -1,4 +1,4 @@
-import { MapPin, Phone, Clock, Instagram, Facebook } from "lucide-react";
+import { MapPin, Phone, Clock, Instagram } from "lucide-react";
 import logoVertical from "@/assets/logo-vertical.png";
 
 const Footer = () => {
@@ -24,6 +24,7 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-1" />
                 <div>
                   <p className="font-medium">Endereço</p>
+                  <p className="text-sm opacity-90">R. Bacaetava, 344</p>
                   <p className="text-sm opacity-90">Brooklin, São Paulo - SP</p>
                 </div>
               </div>
@@ -31,7 +32,7 @@ const Footer = () => {
                 <Phone className="w-5 h-5 flex-shrink-0 mt-1" />
                 <div>
                   <p className="font-medium">Telefone</p>
-                  <p className="text-sm opacity-90">(11) XXXX-XXXX</p>
+                  <p className="text-sm opacity-90">(11) 5531-8385</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -52,18 +53,13 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.instagram.com/casa.aromani/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-primary-foreground/10 hover:bg-primary-foreground/20 rounded-full flex items-center justify-center transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-primary-foreground/10 hover:bg-primary-foreground/20 rounded-full flex items-center justify-center transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
               </a>
             </div>
           </div>
