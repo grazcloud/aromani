@@ -5,9 +5,9 @@ const About = () => {
     <section id="sobre" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#1f3c98" }}>
-            Sobre a Casa Aromani
-          </h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#1f3c98" }}>
+          A Casa Aromani
+        </h2>
           <div className="w-24 h-1 mx-auto mb-8" style={{ backgroundColor: "#b5561c" }}></div>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
             No coração do Brooklin, a Casa Aromani é mais do que uma padaria. 

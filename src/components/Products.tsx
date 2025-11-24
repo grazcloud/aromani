@@ -32,9 +32,9 @@ const Products = () => {
     <section id="produtos" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#1f3c98" }}>
-            Nossos Produtos
-          </h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#1f3c98" }}>
+          Produtos com Amor
+        </h2>
           <div className="w-24 h-1 mx-auto mb-6" style={{ backgroundColor: "#b5561c" }}></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Descubra nossa variedade de produtos artesanais, preparados 

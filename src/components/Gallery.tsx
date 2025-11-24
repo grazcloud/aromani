@@ -16,7 +16,7 @@ const Gallery = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#1f3c98" }}>
-            Galeria
+            Água na Boca
           </h2>
           <div className="w-24 h-1 mx-auto mb-6" style={{ backgroundColor: "#b5561c" }}></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
