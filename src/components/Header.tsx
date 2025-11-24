@@ -38,27 +38,27 @@ const Header = () => {
               className="hover:text-accent transition-colors font-medium"
               style={{ color: "hsl(236, 44%, 21%)" }}
             >
-              Sobre
+              A Casa Aromani
             </button>
             <button
               onClick={() => scrollToSection("produtos")}
               className="hover:text-accent transition-colors font-medium"
               style={{ color: "hsl(236, 44%, 21%)" }}
             >
-              Produtos
+              Produtos com Amor
             </button>
             <button
               onClick={() => scrollToSection("galeria")}
               className="hover:text-accent transition-colors font-medium"
               style={{ color: "hsl(236, 44%, 21%)" }}
             >
-              Galeria
+              Água na Boca
             </button>
             <button
               onClick={() => scrollToSection("contato")}
               className="bg-accent text-accent-foreground px-6 py-2 rounded-full hover:opacity-90 transition-opacity font-medium"
             >
-              Contato
+              Fale com a gente
             </button>
           </nav>
         </div>
