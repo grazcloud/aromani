@@ -44,12 +44,11 @@ const Hero = () => {
             alt={banner.alt}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60" />
         </div>
       ))}
 
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="text-center text-white px-4 max-w-4xl">
+        <div className="text-center text-white px-4 max-w-4xl bg-black/50 backdrop-blur-sm py-12 rounded-lg">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
             Casa Aromani
           </h1>
