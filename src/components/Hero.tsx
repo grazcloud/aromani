@@ -48,7 +48,7 @@ const Hero = () => {
       ))}
 
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="text-center text-white px-4 max-w-4xl bg-black/50 backdrop-blur-sm py-12 rounded-lg">
+        <div className="text-center px-4 max-w-4xl" style={{ color: "hsl(43, 59%, 89%)" }}>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
             Casa Aromani
           </h1>

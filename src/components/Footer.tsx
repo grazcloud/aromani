@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-xl font-bold mb-4">Contato</h3>
+            <h3 className="text-xl font-bold mb-4" style={{ color: "hsl(43, 59%, 89%)" }}>Contato</h3>
             <div className="space-y-3">
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-1" />
@@ -46,7 +46,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-xl font-bold mb-4">Redes Sociais</h3>
+            <h3 className="text-xl font-bold mb-4" style={{ color: "hsl(43, 59%, 89%)" }}>Redes Sociais</h3>
             <p className="text-sm opacity-90 mb-4">
               Siga-nos nas redes sociais e fique por dentro das novidades!
             </p>
