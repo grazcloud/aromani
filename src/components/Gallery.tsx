@@ -18,7 +18,7 @@ const Gallery = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#1f3c98" }}>
             Galeria
           </h2>
-          <div className="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <div className="w-24 h-1 mx-auto mb-6" style={{ backgroundColor: "#b5561c" }}></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Conheça alguns dos nossos produtos e o ambiente acolhedor 
             que preparamos para você.
