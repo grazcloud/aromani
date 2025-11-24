@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import banner1 from "@/assets/banner1.jpg";
 import banner2 from "@/assets/banner2.jpg";
 import banner3 from "@/assets/banner3.jpg";
 import banner4 from "@/assets/banner4.jpg";
+import logoBanner from "@/assets/logo-banner.png";
 
 const banners = [
   { image: banner1, alt: "Bolo artesanal com café" },
   { image: banner2, alt: "Tortas especiais" },
-  { image: banner3, alt: "Ambiente acolhedor" },
+  { image: banner3, alt: "Sanduíche artesanal" },
   { image: banner4, alt: "Café e pão de queijo" },
 ];
 
@@ -21,14 +21,6 @@ const Hero = () => {
     }, 5000);
     return () => clearInterval(timer);
   }, []);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % banners.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + banners.length) % banners.length);
-  };
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
@@ -49,32 +41,20 @@ const Hero = () => {
 
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center px-4 max-w-4xl" style={{ color: "hsl(43, 59%, 89%)" }}>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-            Casa Aromani
-          </h1>
-          <p className="text-xl md:text-3xl mb-8 font-light animate-fade-in">
+          <img 
+            src={logoBanner} 
+            alt="Casa Aromani" 
+            className="h-32 md:h-40 w-auto mx-auto mb-8 animate-fade-in"
+            style={{ filter: "drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5))" }}
+          />
+          <p className="text-xl md:text-3xl mb-8 font-light animate-fade-in" style={{ textShadow: "0 2px 8px rgba(0, 0, 0, 0.7)" }}>
             Onde o cuidado tem aroma e sabor
           </p>
-          <p className="text-lg md:text-xl mb-12 opacity-90 animate-fade-in">
+          <p className="text-lg md:text-xl mb-12 opacity-90 animate-fade-in" style={{ textShadow: "0 2px 8px rgba(0, 0, 0, 0.7)" }}>
             Padoca, Brunch e Cia • Brooklin, São Paulo
           </p>
         </div>
       </div>
-
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm p-3 rounded-full transition-all"
-        aria-label="Slide anterior"
-      >
-        <ChevronLeft className="w-6 h-6 text-white" />
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm p-3 rounded-full transition-all"
-        aria-label="Próximo slide"
-      >
-        <ChevronRight className="w-6 h-6 text-white" />
-      </button>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
         {banners.map((_, index) => (

@@ -5,7 +5,7 @@ const About = () => {
     <section id="sobre" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "hsl(24, 74%, 41%)" }}>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#1f3c98" }}>
             Sobre a Casa Aromani
           </h2>
           <div className="w-24 h-1 bg-accent mx-auto mb-8"></div>
@@ -27,7 +27,7 @@ const About = () => {
             <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
               <Heart className="w-8 h-8 text-accent" />
             </div>
-            <h3 className="text-xl font-semibold mb-3" style={{ color: "hsl(24, 74%, 41%)" }}>Feito com Amor</h3>
+            <h3 className="text-xl font-semibold mb-3" style={{ color: "#1f3c98" }}>Feito com Amor</h3>
             <p className="text-foreground">
               Cada receita é preparada com dedicação e paixão, seguindo tradições 
               que passam de geração em geração.
@@ -38,7 +38,7 @@ const About = () => {
             <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
               <Coffee className="w-8 h-8 text-accent" />
             </div>
-            <h3 className="text-xl font-semibold mb-3" style={{ color: "hsl(24, 74%, 41%)" }}>Produtos Frescos</h3>
+            <h3 className="text-xl font-semibold mb-3" style={{ color: "#1f3c98" }}>Produtos Frescos</h3>
             <p className="text-foreground">
               Tudo é feito diariamente, garantindo frescor e qualidade 
               em cada mordida.
@@ -49,7 +49,7 @@ const About = () => {
             <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
               <Clock className="w-8 h-8 text-accent" />
             </div>
-            <h3 className="text-xl font-semibold mb-3" style={{ color: "hsl(24, 74%, 41%)" }}>Tradição & Qualidade</h3>
+            <h3 className="text-xl font-semibold mb-3" style={{ color: "#1f3c98" }}>Tradição & Qualidade</h3>
             <p className="text-foreground">
               Combinamos técnicas tradicionais com ingredientes selecionados 
               para resultados excepcionais.
