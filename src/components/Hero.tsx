@@ -44,7 +44,7 @@ const Hero = () => {
           <img 
             src={logoBanner} 
             alt="Casa Aromani" 
-            className="h-48 md:h-62 w-auto mx-auto mb-8 animate-fade-in"
+            className="w-72 md:w-[390px] h-auto mx-auto mb-8 animate-fade-in"
             style={{ filter: "drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5))" }}
           />
           <p className="text-xl md:text-3xl mb-8 font-light animate-fade-in" style={{ textShadow: "0 2px 8px rgba(0, 0, 0, 0.7)" }}>
