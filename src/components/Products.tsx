@@ -32,7 +32,7 @@ const Products = () => {
     <section id="produtos" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "hsl(24, 74%, 41%)" }}>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#1f3c98" }}>
             Nossos Produtos
           </h2>
           <div className="w-24 h-1 bg-accent mx-auto mb-6"></div>
@@ -53,7 +53,7 @@ const Products = () => {
                   <category.icon className="w-7 h-7 text-accent" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-2" style={{ color: "hsl(24, 74%, 41%)" }}>
+                  <h3 className="text-2xl font-bold mb-2" style={{ color: "#1f3c98" }}>
                     {category.title}
                   </h3>
                   <p className="text-foreground">

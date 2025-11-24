@@ -15,7 +15,7 @@ const Gallery = () => {
     <section id="galeria" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "hsl(24, 74%, 41%)" }}>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#1f3c98" }}>
             Galeria
           </h2>
           <div className="w-24 h-1 bg-accent mx-auto mb-6"></div>
