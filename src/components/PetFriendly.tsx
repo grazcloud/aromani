@@ -1,4 +1,5 @@
 import petFriendly from "@/assets/pet-friendly.png";
+import cachorro from "@/assets/cachorro.png";
 
 const PetFriendly = () => {
   return (
@@ -11,13 +12,18 @@ const PetFriendly = () => {
           <div className="w-24 h-1 mx-auto mb-6" style={{ backgroundColor: "#b5561c" }}></div>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="w-full md:w-1/2 flex justify-center">
+            <div className="w-full md:w-1/2 flex justify-center gap-6">
               <img
                 src={petFriendly}
                 alt="Pet Friendly - Casa Aromani"
-                className="w-64 h-64 object-contain"
+                className="w-40 h-40 object-contain"
+              />
+              <img
+                src={cachorro}
+                alt="Cachorro feliz na Casa Aromani"
+                className="w-52 h-52 object-cover rounded-2xl shadow-lg"
               />
             </div>
             <div className="w-full md:w-1/2 text-center md:text-left">

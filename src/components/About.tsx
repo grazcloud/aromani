@@ -1,4 +1,4 @@
-import { Coffee, Heart, Clock } from "lucide-react";
+import { Croissant, Heart, Wheat } from "lucide-react";
 
 const About = () => {
   return (
@@ -36,7 +36,7 @@ const About = () => {
 
           <div className="text-center p-6 bg-card rounded-lg shadow-sm hover:shadow-md transition-shadow">
             <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: "rgba(181, 86, 28, 0.1)" }}>
-              <Coffee className="w-8 h-8" style={{ color: "#b5561c" }} />
+              <Croissant className="w-8 h-8" style={{ color: "#b5561c" }} />
             </div>
             <h3 className="text-xl font-semibold mb-3" style={{ color: "#1f3c98" }}>Produtos Frescos</h3>
             <p className="text-foreground">
@@ -47,7 +47,7 @@ const About = () => {
 
           <div className="text-center p-6 bg-card rounded-lg shadow-sm hover:shadow-md transition-shadow">
             <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: "rgba(181, 86, 28, 0.1)" }}>
-              <Clock className="w-8 h-8" style={{ color: "#b5561c" }} />
+              <Wheat className="w-8 h-8" style={{ color: "#b5561c" }} />
             </div>
             <h3 className="text-xl font-semibold mb-3" style={{ color: "#1f3c98" }}>Tradição & Qualidade</h3>
             <p className="text-foreground">

@@ -6,25 +6,25 @@ const Products = () => {
       icon: Croissant,
       title: "Pães Artesanais",
       description: "Pães frescos, crocantes por fora e macios por dentro, assados diariamente",
-      items: ["Pão Francês", "Ciabatta", "Integral", "Multigrãos"],
+      items: ["Pão Francês", "Ciabatta", "Italiano", "Multigrãos", "Brioche", "Croissant", "Salgados"],
     },
     {
       icon: Cake,
-      title: "Bolos & Tortas",
+      title: "Confeitaria",
       description: "Doces irresistíveis feitos com receitas especiais e ingredientes premium",
-      items: ["Bolo de Chocolate", "Torta de Limão", "Cheesecake", "Tortas Artesanais"],
+      items: ["Bolo", "Torta", "Carolina", "Cookie", "Pudim"],
     },
     {
       icon: CoffeeIcon,
       title: "Cafeteria",
       description: "Cafés especiais, chás e bebidas preparadas com carinho",
-      items: ["Espresso", "Cappuccino", "Café Coado", "Chás Especiais"],
+      items: ["Espresso", "Cappuccino", "Café Coado", "Chás Especiais", "Mocha", "Café Gelado"],
     },
     {
       icon: UtensilsCrossed,
       title: "Brunch",
       description: "Opções deliciosas para seu café da manhã ou brunch especial",
-      items: ["Sanduíches", "Tapiocas", "Ovos Mexidos", "Bruschettas"],
+      items: ["Sanduíches", "Tapiocas", "Ovos Mexidos", "Toasts", "Soda Italiana", "Pão de Queijo"],
     },
   ];
 
