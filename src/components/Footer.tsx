@@ -10,7 +10,7 @@ const WhatsAppIcon = () => (
 const Footer = () => {
   return (
     <footer id="contato" className="bg-primary text-primary-foreground">
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-6 md:px-4 py-16">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div className="text-center md:text-left">
             <img

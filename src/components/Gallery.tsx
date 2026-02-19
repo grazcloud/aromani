@@ -31,7 +31,7 @@ const Gallery = () => {
 
   return (
     <section id="galeria" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6 md:px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#1f3c98" }}>
             Água na Boca
