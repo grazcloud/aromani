@@ -1,0 +1,908 @@
+/*
+Theme Name: Casa Aromani
+Theme URI: https://aromani.lovable.app
+Author: Casa Aromani
+Author URI: https://aromani.lovable.app
+Description: Tema oficial da Casa Aromani - Padoca, Brunch e Cia no Brooklin, São Paulo.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: casa-aromani
+Tags: one-page, restaurant, bakery, responsive
+*/
+
+/* ===========================
+   VARIÁVEIS E RESET
+   =========================== */
+:root {
+  --cor-primaria: #1f3c98;
+  --cor-secundaria: #b5561c;
+  --cor-fundo: #fdf8f0;
+  --cor-creme: hsl(43, 59%, 89%);
+  --cor-texto: #333333;
+  --cor-texto-claro: #666666;
+  --cor-card: #ffffff;
+  --cor-whatsapp: #25D366;
+  --fonte-titulo: 'Georgia', serif;
+  --fonte-corpo: 'Helvetica Neue', Arial, sans-serif;
+  --sombra-suave: 0 2px 8px rgba(0,0,0,0.08);
+  --sombra-media: 0 4px 20px rgba(0,0,0,0.12);
+  --raio-borda: 8px;
+  --raio-borda-grande: 16px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fonte-corpo);
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
+/* ===========================
+   UTILITÁRIOS
+   =========================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+.secao-titulo {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--cor-primaria);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.secao-divisor {
+  width: 96px;
+  height: 4px;
+  background-color: var(--cor-secundaria);
+  margin: 0 auto 1.5rem;
+  border: none;
+}
+
+.secao-subtitulo {
+  font-size: 1.125rem;
+  color: var(--cor-texto-claro);
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--cor-secundaria);
+  color: #ffffff;
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: opacity 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-whatsapp:hover {
+  opacity: 0.9;
+  color: #ffffff;
+}
+
+/* ===========================
+   HEADER
+   =========================== */
+#masthead {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--cor-creme);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 96px;
+}
+
+.logo-link img {
+  height: 64px;
+  width: auto;
+  cursor: pointer;
+}
+
+/* Navegação Desktop */
+#nav-principal {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #nav-principal {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+#nav-principal a {
+  color: var(--cor-primaria);
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+#nav-principal a:hover {
+  color: var(--cor-secundaria);
+}
+
+.btn-fale-conosco {
+  background-color: var(--cor-secundaria);
+  color: #ffffff !important;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: opacity 0.2s ease;
+}
+
+.btn-fale-conosco:hover {
+  opacity: 0.9;
+  color: #ffffff !important;
+}
+
+/* Hamburger Mobile */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 8px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--cor-primaria);
+  transition: all 0.3s ease;
+}
+
+.hamburger.ativo span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.ativo span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.ativo span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+/* Menu Mobile */
+#menu-mobile {
+  display: none;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid hsl(43, 40%, 78%);
+  padding: 24px 16px;
+  background-color: var(--cor-creme);
+}
+
+#menu-mobile.aberto {
+  display: flex;
+}
+
+#menu-mobile a {
+  color: var(--cor-primaria);
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 12px 0;
+  border-bottom: 1px solid hsl(43, 40%, 78%);
+  transition: opacity 0.2s;
+}
+
+#menu-mobile a:hover {
+  opacity: 0.7;
+}
+
+#menu-mobile .btn-fale-conosco {
+  margin-top: 16px;
+  text-align: center;
+  padding: 12px 24px;
+  border-bottom: none;
+}
+
+/* ===========================
+   HERO / BANNER
+   =========================== */
+#hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.hero-slides {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.hero-slide.ativo {
+  opacity: 1;
+}
+
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-conteudo {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 16px;
+  color: hsl(43, 59%, 89%);
+}
+
+.hero-conteudo-inner {
+  max-width: 900px;
+}
+
+.hero-logo {
+  width: 240px;
+  height: auto;
+  margin: 0 auto 32px;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5));
+}
+
+@media (min-width: 768px) {
+  .hero-logo {
+    width: 290px;
+  }
+}
+
+.hero-tagline {
+  font-size: clamp(1.25rem, 3vw, 1.875rem);
+  font-weight: 300;
+  margin-bottom: 24px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+.hero-local {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  opacity: 0.9;
+  margin-bottom: 48px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+.hero-dots {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.hero-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50px;
+  background-color: rgba(255,255,255,0.5);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.hero-dot.ativo {
+  background-color: #ffffff;
+  width: 32px;
+}
+
+/* ===========================
+   SOBRE / A CASA AROMANI
+   =========================== */
+#sobre {
+  padding: 80px 0;
+  background-color: var(--cor-fundo);
+}
+
+.sobre-intro {
+  max-width: 800px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+
+.sobre-intro p {
+  font-size: 1.125rem;
+  color: var(--cor-texto-claro);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.sobre-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .sobre-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.sobre-card {
+  text-align: center;
+  padding: 24px;
+  background-color: var(--cor-card);
+  border-radius: var(--raio-borda);
+  box-shadow: var(--sombra-suave);
+  transition: box-shadow 0.3s ease;
+}
+
+.sobre-card:hover {
+  box-shadow: var(--sombra-media);
+}
+
+.sobre-card-icone {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: rgba(181, 86, 28, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-size: 2rem;
+}
+
+.sobre-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--cor-primaria);
+  margin-bottom: 12px;
+}
+
+.sobre-card p {
+  color: var(--cor-texto);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* ===========================
+   PRODUTOS
+   =========================== */
+#produtos {
+  padding: 80px 0;
+  background-color: rgba(0,0,0,0.02);
+}
+
+.produtos-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .produtos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.produto-card {
+  background-color: var(--cor-card);
+  padding: 32px;
+  border-radius: var(--raio-borda);
+  box-shadow: var(--sombra-suave);
+  transition: box-shadow 0.3s ease;
+}
+
+.produto-card:hover {
+  box-shadow: var(--sombra-media);
+}
+
+.produto-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.produto-card-icone {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--raio-borda);
+  background-color: rgba(181, 86, 28, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.5rem;
+}
+
+.produto-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--cor-secundaria);
+  margin-bottom: 8px;
+}
+
+.produto-card p {
+  color: var(--cor-texto);
+  font-size: 0.95rem;
+}
+
+.produto-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.produto-tag {
+  padding: 4px 12px;
+  background-color: rgba(181, 86, 28, 0.08);
+  color: var(--cor-texto);
+  border-radius: 50px;
+  font-size: 0.875rem;
+}
+
+/* ===========================
+   GALERIA
+   =========================== */
+#galeria {
+  padding: 80px 0;
+  background-color: var(--cor-fundo);
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .galeria-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .galeria-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.galeria-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--raio-borda);
+  aspect-ratio: 1;
+}
+
+.galeria-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.galeria-item:hover img {
+  transform: scale(1.05);
+}
+
+.galeria-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+}
+
+.galeria-item:hover .galeria-overlay {
+  opacity: 1;
+}
+
+.galeria-overlay span {
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* ===========================
+   PET FRIENDLY
+   =========================== */
+#pet {
+  padding: 80px 0;
+  background-color: rgba(181, 86, 28, 0.04);
+}
+
+.pet-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .pet-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.pet-imagem {
+  border-radius: var(--raio-borda-grande);
+  overflow: hidden;
+  box-shadow: var(--sombra-media);
+}
+
+.pet-imagem img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.pet-texto h2 {
+  text-align: left;
+}
+
+.pet-texto .secao-divisor {
+  margin-left: 0;
+}
+
+.pet-texto p {
+  font-size: 1.125rem;
+  color: var(--cor-texto-claro);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.pet-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(181, 86, 28, 0.1);
+  color: var(--cor-secundaria);
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 16px;
+}
+
+/* ===========================
+   ENCOMENDAS
+   =========================== */
+#encomendas {
+  padding: 80px 0;
+  background-color: var(--cor-fundo);
+}
+
+.encomendas-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto 48px;
+}
+
+@media (min-width: 768px) {
+  .encomendas-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.encomenda-card {
+  background-color: var(--cor-card);
+  padding: 32px;
+  border-radius: var(--raio-borda);
+  box-shadow: var(--sombra-suave);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.encomenda-card:hover {
+  box-shadow: var(--sombra-media);
+}
+
+.encomenda-icone {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: rgba(181, 86, 28, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  font-size: 2rem;
+}
+
+.encomenda-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--cor-secundaria);
+  margin-bottom: 12px;
+}
+
+.encomenda-card p {
+  color: var(--cor-texto);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.encomenda-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.encomenda-tag {
+  padding: 4px 12px;
+  background-color: rgba(181, 86, 28, 0.08);
+  color: var(--cor-texto);
+  border-radius: 50px;
+  font-size: 0.875rem;
+}
+
+.encomendas-cta {
+  text-align: center;
+}
+
+.encomendas-cta p {
+  font-size: 1.125rem;
+  color: var(--cor-texto-claro);
+  margin-bottom: 24px;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+#colophon {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  padding: 64px 0 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.footer-logo img {
+  height: 176px;
+  width: auto;
+  margin: 0 auto 16px;
+}
+
+@media (min-width: 768px) {
+  .footer-logo img {
+    margin: 0 0 16px;
+  }
+}
+
+.footer-logo p {
+  font-size: 0.875rem;
+  opacity: 0.9;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer-logo p {
+    text-align: left;
+  }
+}
+
+.footer-secao h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: hsl(43, 59%, 89%);
+  margin-bottom: 16px;
+}
+
+.footer-contato-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.footer-contato-item .icone {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+  opacity: 0.9;
+}
+
+.footer-contato-item p {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.footer-contato-item span,
+.footer-contato-item a {
+  font-size: 0.875rem;
+  opacity: 0.9;
+  display: block;
+  color: #ffffff;
+}
+
+.footer-contato-item a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.footer-sociais p {
+  font-size: 0.875rem;
+  opacity: 0.9;
+  margin-bottom: 16px;
+}
+
+.footer-social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.footer-social-link:hover {
+  background-color: rgba(255,255,255,0.2);
+  color: #ffffff;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding: 32px 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 0.875rem;
+  opacity: 0.75;
+}
+
+/* ===========================
+   WHATSAPP FLUTUANTE
+   =========================== */
+.whatsapp-flutuante {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--cor-whatsapp);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-flutuante:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-flutuante svg {
+  width: 32px;
+  height: 32px;
+  fill: #ffffff;
+}
+
+/* ===========================
+   ANIMAÇÕES
+   =========================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* ===========================
+   RESPONSIVIDADE EXTRA
+   =========================== */
+@media (max-width: 480px) {
+  .galeria-grid {
+    grid-template-columns: 1fr;
+  }
+}

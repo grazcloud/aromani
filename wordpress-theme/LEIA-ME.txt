@@ -1,0 +1,99 @@
+======================================
+  TEMA WORDPRESS - CASA AROMANI
+  Instruções de Instalação e Uso
+======================================
+
+ESTRUTURA DE ARQUIVOS
+---------------------
+wordpress-theme/
+├── style.css          → Estilo principal + informações do tema
+├── functions.php      → Funções e configurações do tema
+├── header.php         → Cabeçalho (navbar + menu mobile)
+├── footer.php         → Rodapé + botão WhatsApp flutuante
+├── front-page.php     → Página inicial (todas as seções)
+├── index.php          → Template fallback para listagem de posts
+├── page.php           → Template para páginas estáticas
+├── js/
+│   └── main.js        → JavaScript (slideshow, menu, scroll)
+└── images/            → COLOQUE SUAS IMAGENS AQUI (veja abaixo)
+
+
+INSTALAÇÃO
+----------
+1. Renomeie a pasta "wordpress-theme" para "casa-aromani"
+2. Compacte a pasta em um arquivo .zip: casa-aromani.zip
+3. No painel do WordPress, vá em:
+   Aparência > Temas > Adicionar novo > Enviar tema
+4. Selecione o arquivo casa-aromani.zip e clique em "Instalar agora"
+5. Após instalado, clique em "Ativar"
+
+
+CONFIGURAÇÃO DA PÁGINA INICIAL
+-------------------------------
+1. Vá em: Configurações > Leitura
+2. Em "Sua página inicial exibe", selecione "Uma página estática"
+3. Em "Página inicial", crie ou selecione uma página qualquer
+4. Salve. O tema usará automaticamente o front-page.php
+
+
+IMAGENS - O QUE COPIAR PARA A PASTA /images/
+---------------------------------------------
+Copie as imagens do seu projeto Lovable para dentro da pasta
+"images/" do tema antes de compactar. Nomes esperados:
+
+  banner1.jpg               → Slide 1 do hero
+  banner2.jpg               → Slide 2 do hero
+  banner3.jpg               → Slide 3 do hero
+  banner4.jpg               → Slide 4 do hero
+  logo-banner.png           → Logo centralizado no hero
+  logo-horizontal.png       → Logo no header (navbar)
+  logo-vertical.png         → Logo no rodapé
+  pet-friendly.png          → Foto da seção Pet Friendly
+  gallery-bolo-chocolate.jpg
+  gallery-carolinas.jpg
+  gallery-padaria.jpg
+  gallery-paes.jpg
+  gallery-sanduiche.jpg
+  gallery-toast-bacon.jpg
+  gallery-toast-salmon.jpg
+  gallery-torta.jpg
+  gallery-tortas-vitrine.jpg
+
+
+LOGOTIPO PERSONALIZADO (Recomendado)
+-------------------------------------
+Em vez de editar o código, use o recurso nativo do WordPress:
+1. Vá em: Aparência > Customizar > Identidade do Site
+2. Clique em "Selecionar logotipo" e faça upload do logo desejado
+3. O tema exibirá automaticamente o logo no header e rodapé
+
+
+CONFIGURAÇÕES PERSONALIZÁVEIS (Customizer)
+------------------------------------------
+Vá em: Aparência > Customizar > "Informações da Casa Aromani"
+Você pode alterar diretamente pelo painel:
+
+  - Número do WhatsApp
+  - URL do Instagram
+  - Endereço (linha 1 e linha 2)
+  - Horário de funcionamento (semana e fim de semana)
+
+
+ALTERAR NÚMERO DO WHATSAPP NO CÓDIGO
+-------------------------------------
+Se preferir editar diretamente, procure em functions.php:
+  '551155318385'
+E substitua pelo número desejado (com código do país, sem + ou espaços).
+
+
+COMPATIBILIDADE
+---------------
+  - WordPress 5.8 ou superior
+  - PHP 7.4 ou superior
+  - Testado com os principais plugins de cache e SEO
+
+
+SUPORTE
+-------
+Site criado com Lovable.dev
+Contato: casa.aromani (Instagram)
