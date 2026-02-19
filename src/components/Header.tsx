@@ -23,47 +23,54 @@ const Header = () => {
       style={{ backgroundColor: "hsl(43, 59%, 89%)" }}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24">
           <div className="flex items-center">
             <img
               src={logoHorizontal}
               alt="Casa Aromani"
-              className="h-12 w-auto cursor-pointer"
+              className="h-16 w-auto cursor-pointer"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             />
           </div>
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6">
             <button
               onClick={() => scrollToSection("sobre")}
-              className="hover:text-accent transition-colors font-medium"
+              className="hover:text-accent transition-colors font-medium text-sm"
               style={{ color: "hsl(236, 44%, 21%)" }}
             >
               A Casa Aromani
             </button>
             <button
               onClick={() => scrollToSection("produtos")}
-              className="hover:text-accent transition-colors font-medium"
+              className="hover:text-accent transition-colors font-medium text-sm"
               style={{ color: "hsl(236, 44%, 21%)" }}
             >
               Produtos com Amor
             </button>
             <button
               onClick={() => scrollToSection("galeria")}
-              className="hover:text-accent transition-colors font-medium"
+              className="hover:text-accent transition-colors font-medium text-sm"
               style={{ color: "hsl(236, 44%, 21%)" }}
             >
               Água na Boca
             </button>
             <button
               onClick={() => scrollToSection("pet")}
-              className="hover:text-accent transition-colors font-medium"
+              className="hover:text-accent transition-colors font-medium text-sm"
               style={{ color: "hsl(236, 44%, 21%)" }}
             >
               Traga seu Pet
             </button>
             <button
+              onClick={() => scrollToSection("encomendas")}
+              className="hover:text-accent transition-colors font-medium text-sm"
+              style={{ color: "hsl(236, 44%, 21%)" }}
+            >
+              Encomendas
+            </button>
+            <button
               onClick={() => scrollToSection("contato")}
-              className="bg-accent text-accent-foreground px-6 py-2 rounded-full hover:opacity-90 transition-opacity font-medium"
+              className="bg-accent text-accent-foreground px-6 py-2 rounded-full hover:opacity-90 transition-opacity font-medium text-sm"
             >
               Fale com a gente
             </button>

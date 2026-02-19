@@ -2,11 +2,28 @@ import gallery1 from "@/assets/gallery1.jpg";
 import gallery2 from "@/assets/gallery2.jpg";
 import banner1 from "@/assets/banner1.jpg";
 import banner4 from "@/assets/banner4.jpg";
+import galleryToastBacon from "@/assets/gallery-toast-bacon.jpg";
+import galleryToastSalmon from "@/assets/gallery-toast-salmon.jpg";
+import galleryTorta from "@/assets/gallery-torta.jpg";
+import galleryCarolinas from "@/assets/gallery-carolinas.jpg";
+import galleryBoloChocolate from "@/assets/gallery-bolo-chocolate.jpg";
+import galleryTortasVitrine from "@/assets/gallery-tortas-vitrine.jpg";
+import gallerySanduiche from "@/assets/gallery-sanduiche.jpg";
+import galleryPadaria from "@/assets/gallery-padaria.jpg";
+import galleryPaes from "@/assets/gallery-paes.jpg";
 
 const Gallery = () => {
   const images = [
     { src: gallery1, alt: "Bruschetta artesanal" },
-    { src: gallery2, alt: "Bruschetta com drink especial" },
+    { src: galleryToastSalmon, alt: "Toast de salmão" },
+    { src: galleryTorta, alt: "Torta artesanal" },
+    { src: galleryCarolinas, alt: "Carolinas da confeitaria" },
+    { src: galleryBoloChocolate, alt: "Bolo de chocolate Aromani" },
+    { src: galleryTortasVitrine, alt: "Tortas na vitrine" },
+    { src: gallerySanduiche, alt: "Sanduíche artesanal" },
+    { src: galleryToastBacon, alt: "Toast com bacon e ovos" },
+    { src: galleryPadaria, alt: "Interior da padaria" },
+    { src: galleryPaes, alt: "Pães artesanais" },
     { src: banner1, alt: "Bolo artesanal com café" },
     { src: banner4, alt: "Café e pão de queijo" },
   ];
@@ -25,7 +42,7 @@ const Gallery = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
           {images.map((image, index) => (
             <div
               key={index}
