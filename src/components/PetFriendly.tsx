@@ -14,19 +14,19 @@ const PetFriendly = () => {
 
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="w-full md:w-1/2 flex justify-center gap-6">
-              <img
-                src={petFriendly}
-                alt="Pet Friendly - Casa Aromani"
-                className="w-40 h-40 object-contain"
-              />
+            <div className="w-full md:w-1/2 flex justify-center">
               <img
                 src={cachorro}
                 alt="Cachorro feliz na Casa Aromani"
-                className="w-52 h-52 object-cover rounded-2xl shadow-lg"
+                className="w-80 h-auto object-contain rounded-2xl shadow-lg"
               />
             </div>
             <div className="w-full md:w-1/2 text-center md:text-left">
+              <img
+                src={petFriendly}
+                alt="Pet Friendly - Casa Aromani"
+                className="w-24 h-24 object-contain mx-auto md:mx-0 mb-6"
+              />
               <p className="text-lg md:text-xl mb-6" style={{ color: "hsl(236, 44%, 21%)" }}>
                 Na Casa Aromani, seu pet é muito bem-vindo!
               </p>

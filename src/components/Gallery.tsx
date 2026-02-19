@@ -25,6 +25,7 @@ const Gallery = () => {
     { src: galleryPadaria, alt: "Interior da padaria" },
     { src: galleryPaes, alt: "Pães artesanais" },
     { src: banner1, alt: "Bolo artesanal com café" },
+    { src: gallery2, alt: "Bruschetta com drink especial" },
     { src: banner4, alt: "Café e pão de queijo" },
   ];
 
@@ -42,21 +43,29 @@ const Gallery = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
+        <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide" style={{ scrollSnapType: "x mandatory" }}>
           {images.map((image, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all aspect-[3/4]"
+              className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all flex-shrink-0"
+              style={{ width: "320px", height: "420px", scrollSnapAlign: "start" }}
             >
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <p className="absolute bottom-3 left-3 right-3 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                {image.alt}
+              </p>
             </div>
           ))}
         </div>
+
+        <p className="text-center text-sm text-muted-foreground mt-4">
+          ← Deslize para ver mais →
+        </p>
       </div>
     </section>
   );
